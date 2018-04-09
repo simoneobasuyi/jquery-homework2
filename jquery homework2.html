@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>News quiz for April 9, 2018</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>News quiz for April 9, 2018</h1>
+
+      <div id="question-1" class="form-group">
+        <label class="control-label">What color is the sky?</label>
+        <input type="text" class="form-control" />
+      </div>
+
+      <div id="question-2" class="form-group">
+        <label class="control-label">How many is a bakers dozen</label>
+        <select class="form-control">
+          <option value="answer-1">12</option>
+          <option value="answer-2">13</option>
+          <option value="answer-3">6</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <input id="grade-it" type="button" value="Grade my quiz" class="btn btn-primary" />
+      </div>
+    </div>
+
+    <script>
+      src="http://code.jquery.com/jquery-3.3.1.min.js"</script>
+    <script>
+    $('#').on('click', function() {
+      var q1Answer = $("form-control").val();
+
+      if (q1Answer == 'blue' || q1Answer == "Blue") {
+        alert('You named ')
+      }
+        }
+  </body>
+</html>
