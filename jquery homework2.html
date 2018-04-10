@@ -23,6 +23,11 @@
         </select>
       </div>
 
+      <div id="question-3" class="form-group">
+        <label class="control-label">What color do UT students bleed?</label>
+        <input type="text" class="form-control" id="q3"/>
+      </div>
+
       <div class="form-group">
         <input id="grade-it" type="button" value="Grade my quiz" class="btn btn-primary" />
       </div>
@@ -38,17 +43,27 @@
     }else {
         $("#question-1").addClass("has-error");
         }
-    });
 
-    $('#grade-it').on('click', function() {
+
+
       var q2Answer = $("#q2").val();
       console.log(q2Answer);
-      if(q2Answer == "answer-2"){
+      if(q2Answer == "answer-2") {
         $("#question-2").addClass("has-success");
       }else {
         $("#question-2").addClass("has-error");
       }
-    });
+
+
+      var q3Answer = $("#q3").val();
+
+    if (q3Answer == 'orange' || q3Answer == 'Orange') {
+      $("#question-3").addClass("has-success");
+    } else {
+      $("#question-3").addClass("has-error");
+    }
+  });
+
     </script>
   </body>
 </html>
