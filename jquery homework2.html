@@ -36,6 +36,13 @@
   src="http://code.jquery.com/jquery-3.3.1.slim.js"></script>
     <script>
     $('#grade-it').on('click', function() {
+      $("#question-1").removeClass("has-success")
+      $("#question-1").removeClass("has-error")
+      $("#question-2").removeClass("has-success")
+      $("#question-2").removeClass("has-error")
+      $("#question-3").removeClass("has-success")
+      $("#question-3").removeClass("has-error")
+
       var q1Answer = $("#q1").val();
 
       if (q1Answer == 'blue' || q1Answer == "Blue") {
