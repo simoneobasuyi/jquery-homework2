@@ -31,17 +31,22 @@
       <div class="form-group">
         <input id="grade-it" type="button" value="Grade my quiz" class="btn btn-primary" />
       </div>
+
+    <div class="form-group">
+      <input id="give-answers" type="button" value=" Give me the asnwers!" class="btn btn-primary" />
     </div>
+  </div>
   <script
   src="http://code.jquery.com/jquery-3.3.1.slim.js"></script>
     <script>
     $('#grade-it').on('click', function() {
-      $("#question-1").removeClass("has-success")
-      $("#question-1").removeClass("has-error")
-      $("#question-2").removeClass("has-success")
-      $("#question-2").removeClass("has-error")
-      $("#question-3").removeClass("has-success")
-      $("#question-3").removeClass("has-error")
+
+      $("#question-1").removeClass("has-success");
+      $("#question-1").removeClass("has-error");
+      $("#question-2").removeClass("has-success");
+      $("#question-2").removeClass("has-error");
+      $("#question-3").removeClass("has-success");
+      $("#question-3").removeClass("has-error");
 
       var q1Answer = $("#q1").val();
 
@@ -69,6 +74,12 @@
     } else {
       $("#question-3").addClass("has-error");
     }
+  });
+
+  $('#give-answers').on('click', function() {
+    $("#q1").val("Blue");
+    $("#q2").val("answer-2");
+    $("#q3").val("Orange");
   });
 
     </script>
