@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+      <meta charset="utf-8">
     <title>News quiz for April 9, 2018</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
   </head>
@@ -11,12 +11,12 @@
 
       <div id="question-1" class="form-group">
         <label class="control-label">What color is the sky?</label>
-        <input type="text" class="form-control" />
+        <input type="text" class="form-control" id="q1"/>
       </div>
 
       <div id="question-2" class="form-group">
         <label class="control-label">How many is a bakers dozen</label>
-        <select class="form-control">
+        <select class="form-control" id="q2">
           <option value="answer-1">12</option>
           <option value="answer-2">13</option>
           <option value="answer-3">6</option>
@@ -27,16 +27,28 @@
         <input id="grade-it" type="button" value="Grade my quiz" class="btn btn-primary" />
       </div>
     </div>
-
+  <script
+  src="http://code.jquery.com/jquery-3.3.1.slim.js"></script>
     <script>
-      src="http://code.jquery.com/jquery-3.3.1.min.js"</script>
-    <script>
-    $('#').on('click', function() {
-      var q1Answer = $("form-control").val();
+    $('#grade-it').on('click', function() {
+      var q1Answer = $("#q1").val();
 
       if (q1Answer == 'blue' || q1Answer == "Blue") {
-        alert('You named ')
-      }
+        $("#question-1").addClass("has-success");
+    }else {
+        $("#question-1").addClass("has-error");
         }
+    });
+
+    $('#grade-it').on('click', function() {
+      var q2Answer = $("#q2").val();
+      console.log(q2Answer);
+      if(q2Answer == "answer-2"){
+        $("#question-2").addClass("has-success");
+      }else {
+        $("#question-2").addClass("has-error");
+      }
+    });
+    </script>
   </body>
 </html>
